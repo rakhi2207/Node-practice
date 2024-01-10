@@ -1,5 +1,6 @@
 const path = require('path');
 
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 
@@ -22,4 +23,4 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+app.listen(process.env.PORT);
